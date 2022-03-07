@@ -8,4 +8,4 @@ object Neg extends App:
     def negMethod (f: (s : String)=> Boolean) : String=>Boolean = s => !f(s);
 
   object GenericsNeg:
-      def negGen[X] (f: (s : X)=> Boolean) : X=>Boolean = s => !f(s);
+    def negGen[X] (f: (s : X)=> Boolean) : X=>Boolean = s => !f(s);

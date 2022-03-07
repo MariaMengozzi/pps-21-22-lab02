@@ -1,3 +1,5 @@
 [debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/C:/Users/maria/OneDrive%20-%20Alma%20Mater%20Studiorum%20Università%20di%20Bologna/MAGISTRALE/1%20anno/PPS/lab/02-lab/pps-21-22-lab02/project/"), "pps-21-22-lab02-build")...
-[debug] Done updating ProjectRef(uri("file:/C:/Users/maria/OneDrive%20-%20Alma%20Mater%20Studiorum%20Università%20di%20Bologna/MAGISTRALE/1%20anno/PPS/lab/02-lab/pps-21-22-lab02/project/"), "pps-21-22-lab02-build")
+[debug] Updating ProjectRef(uri("file:/C:/Users/maria/OneDrive%20-%20Alma%20Mater%20Studiorum%20Università%20di%20Bologna/MAGISTRALE/1%20anno/PPS/code/02-code-project/project/"), "root-02-code-project-build")...
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[debug] Done updating ProjectRef(uri("file:/C:/Users/maria/OneDrive%20-%20Alma%20Mater%20Studiorum%20Università%20di%20Bologna/MAGISTRALE/1%20anno/PPS/code/02-code-project/project/"), "root-02-code-project-build")
