@@ -2,7 +2,7 @@ package u02lab
 
 import org.junit.*
 import org.junit.Assert.*
-import Neg.Neg.*
+import Es3.Neg.*
 
 class NegTest:
   val empty: String => Boolean = _ == "" // predicate on strings

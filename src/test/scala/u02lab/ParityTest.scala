@@ -2,7 +2,7 @@ package u02lab
 
 import org.junit.*
 import org.junit.Assert.*
-import Parity.Parity.*
+import Es3.Parity.*
 
 class ParityTest {
   @Test def testOdd() =

@@ -2,7 +2,7 @@ package u02lab
 
 import org.junit.*
 import org.junit.Assert.*
-import CurrierEx.CurrierEx.*
+import Es4.CurrierEx.*
 
 class CurrierExTest:
   @Test def testP1() =

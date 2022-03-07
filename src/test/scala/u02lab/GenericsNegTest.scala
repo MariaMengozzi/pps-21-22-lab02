@@ -2,7 +2,7 @@ package u02lab
 
 import org.junit.Assert.{assertFalse, assertTrue}
 import org.junit.Test
-import Neg.GenericsNeg.negGen
+import Es3.GenericsNeg.negGen
 
 class GenericsNegTest:
 

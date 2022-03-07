@@ -1,6 +1,6 @@
 package u02lab
 
-object CurrierEx extends App:
+object Es4 extends App:
   object CurrierEx:
 
     val p1: (Int) => (Int) => (Int) => Boolean = x => y => z => x<=y && y<=z;
