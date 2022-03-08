@@ -10,7 +10,7 @@ object Es6 extends App:
     def tailFib(n: Int): Int =
       @annotation.tailrec
       def _tailFib (n: Int, prevSum: Int, sum: Int): Int = n match
-        case 0 => prev
+        case 0 => prevSum
         case 1 => sum
         case _ => _tailFib(n-1, sum , sum + prevSum)
       _tailFib(n, 0, 1)
