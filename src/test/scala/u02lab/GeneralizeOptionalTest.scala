@@ -18,8 +18,8 @@ class GeneralizeOptionalTest:
     assertEquals(None(), ìnvert(None()))
 
   @Test def testDobleGenWithSome()=
-      val f: Int => Int = x => x*2
-      assertEquals(Some(4), generalizeDoubleAndInvert(Some(2))(f))
+    val f: Int => Int = x => x*2
+    assertEquals(Some(4), generalizeDoubleAndInvert(Some(2))(f))
 
   @Test def testDobleGenWithNone()=
     val f: Int => Int = x => x*2

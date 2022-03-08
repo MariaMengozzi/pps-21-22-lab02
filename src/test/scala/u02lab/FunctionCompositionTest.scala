@@ -8,4 +8,6 @@ class FunctionCompositionTest:
   @Test def testComposition()=
     //f(g(5)) = f(5*2) = f(10) = 10-1
     assertEquals(9, compose(_ - 1, _ * 2)(5));
+
+  @Test def testCompositionNotEq()=
     assertNotEquals(9, compose(_ - 1, _ * 2)(6)) //expected 11
