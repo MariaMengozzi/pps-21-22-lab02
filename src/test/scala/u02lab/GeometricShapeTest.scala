@@ -3,7 +3,7 @@ import org.junit.*
 import org.junit.Assert.*
 import Es7.Shape.*
 
-class GeometricShape:
+class GeometricShapeTest:
   @Test def testRectangle()=
     val rect = Rectangle(10, 5);
     assertEquals(30, perimeter(rect), 0.001);
