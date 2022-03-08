@@ -20,3 +20,4 @@ class OptionalTest:
     assertEquals(Some("ciao"), map2(Some("ci"), Some("ao"))((x,y) => x+y))
     assertEquals(None(), map2(None[Int](), Some(5))(_ > _))
     assertEquals(Some(true), map2(Some(8), Some(5))(_ > _))
+

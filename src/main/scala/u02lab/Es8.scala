@@ -30,3 +30,15 @@ object Es8 extends App:
     def map2[A,A1,B](opt1: Option[A], opt2: Option[A1])(p: (A,A1) => B): Option[B] = (opt1, opt2) match
       case (Some(i), Some(j)) => Some(p(i,j))
       case _ => None()
+
+    def double(opt: Option[Int]): Option[Int] = opt match
+      case Some(i) => Some(i*2)
+      case _ => None()
+
+    def ìnvert(opt: Option[Boolean]): Option[Boolean] = opt match
+      case Some(i) => Some(!i)
+      case _ => None()
+
+    def generalizeDoubleAndInvert[A](opt:Option[A])(f: A => A): Option[A]= opt match
+      case Some(i) => Some(f(i))
+      case _ => None()
