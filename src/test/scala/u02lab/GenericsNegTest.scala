@@ -10,20 +10,20 @@ class GenericsNegTest:
   val int: Int => Boolean = _ == 0 // predicate on strings
   val notZero = negGen(int)
 
-  @Test def testGenericsNegEmpty1() =
+  @Test def testGenericsNegEmpty1(): Unit =
     assertTrue(notEmpty("foo"));
 
-  @Test def testGenericsNegEmpty2() =
+  @Test def testGenericsNegEmpty2(): Unit =
     assertFalse(notEmpty(""));
 
-  @Test def testGenericsNegEmpty3() =
+  @Test def testGenericsNegEmpty3(): Unit =
     assertTrue(notEmpty("foo") && !notEmpty(""));
 
-  @Test def testGenericsNegInt1() =
+  @Test def testGenericsNegInt1(): Unit =
     assertTrue(notZero(2));
 
-  @Test def testGenericsNegInt2() =
+  @Test def testGenericsNegInt2(): Unit =
     assertFalse(notZero(0));
 
-  @Test def testGenericsNegInt3() =
+  @Test def testGenericsNegInt3(): Unit =
     assertTrue(notZero(3) && !notZero(0));

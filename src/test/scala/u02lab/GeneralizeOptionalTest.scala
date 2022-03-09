@@ -5,30 +5,30 @@ import org.junit.Test
 import u02lab.Es8.Option.*
 
 class GeneralizeOptionalTest:
-  @Test def testDobleWithSome()=
+  @Test def testDobleWithSome(): Unit =
     assertEquals(Some(4), double(Some(2)))
 
-  @Test def testDobleWithNone()=
+  @Test def testDobleWithNone(): Unit =
     assertEquals(None(), double(None()))
 
-  @Test def testInvertWithSome()=
+  @Test def testInvertWithSome(): Unit =
     assertEquals(Some(false), ìnvert(Some(true)))
 
-  @Test def testInverWithNone()=
+  @Test def testInverWithNone(): Unit =
     assertEquals(None(), ìnvert(None()))
 
-  @Test def testDobleGenWithSome()=
+  @Test def testDobleGenWithSome(): Unit =
     val f: Int => Int = x => x*2
     assertEquals(Some(4), generalizeDoubleAndInvert(Some(2))(f))
 
-  @Test def testDobleGenWithNone()=
+  @Test def testDobleGenWithNone(): Unit =
     val f: Int => Int = x => x*2
     assertEquals(None(), generalizeDoubleAndInvert(None())(f))
 
-  @Test def testInvertGenWithSome()=
+  @Test def testInvertGenWithSome(): Unit =
     val f: Boolean => Boolean = x => !x
     assertEquals(Some(false), generalizeDoubleAndInvert(Some(true))(f))
 
-  @Test def testInverGenWithNone()=
+  @Test def testInverGenWithNone(): Unit =
     val f: Boolean => Boolean = x => !x
     assertEquals(None(), generalizeDoubleAndInvert(None())(f))
