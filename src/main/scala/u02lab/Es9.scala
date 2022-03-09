@@ -21,7 +21,7 @@ object Es9 extends App :
       case Leaf(e) if (e == elem) => 1
       case _ => 0
 
-    def generalisation[A,B](t: Tree[A], elem: A, p: (B,B,A) => B, pL: (A,A) => B) : B = t match 
-      case Branch(l,r) => p(generalisation(l, elem, p, pL), generalisation(r, elem, p, pL), elem)
-      case Leaf(e) => pL(e, elem)
+    def generalisation[A,B](t: Tree[A], p: (B,B) => B, pL: A => B) : B = t match 
+      case Branch(l,r) => p(generalisation(l, p, pL), generalisation(r, p, pL))
+      case Leaf(e) => pL(e)
     

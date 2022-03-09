@@ -7,23 +7,23 @@ import u02lab.Es9.Tree.*
 class BTreeTest:
   val tree = Branch(Branch(Leaf(1), Leaf(2)), Leaf(1))
   @Test def testBTreeGeneralisationSize(): Unit=
-    val p: (Int, Int, Int) => Int = (x,y,_) => x+y;
-    val pL: (Int, Int) => Int = (_,_) => 1
-    assertEquals(3, generalisation (tree, 0, p, pL))
+    val p: (Int, Int) => Int = (x,y) => x+y;
+    val pL: (Int) => Int = _ => 1
+    assertEquals(3, generalisation (tree, p, pL))
 
   @Test def testBTreeGeneralisationFind(): Unit=
-    val p: (Boolean, Boolean, Int) => Boolean = (x,y,_) => x || y;
-    val pL: (Int, Int) => Boolean = (e, elem)=> e == elem
-    assertTrue(generalisation (tree, 1, p, pL))
+    val p: (Boolean, Boolean) => Boolean = (x,y) => x || y;
+    val pL: (Int) => Boolean = e => e == 1
+    assertTrue(generalisation (tree, p, pL))
 
   @Test def testBTreeGeneralisationFind2(): Unit=
-    val p: (Boolean, Boolean, Int) => Boolean = (x,y,_) => x || y;
-    val pL: (Int, Int) => Boolean = (e, elem)=> e == elem
-    assertFalse(generalisation (tree,4, p, pL))
+    val p: (Boolean, Boolean) => Boolean = (x,y) => x || y;
+    val pL: (Int) => Boolean = e => e == 4
+    assertFalse(generalisation (tree,p, pL))
 
   @Test def testBTreeGeneralisationCount(): Unit=
-    val p: (Int, Int, Int) => Int = (x,y,_) => x+y;
-    val pL: (Int, Int) => Int = (e, elem)=> (e, elem) match
-      case (x,y) if x == y => 1
+    val p: (Int, Int) => Int = (x,y) => x+y;
+    val pL: (Int) => Int = e => e match
+      case x if (x == 1) => 1
       case _ => 0
-    assertEquals(2, generalisation (tree,1, p, pL))
+    assertEquals(2, generalisation (tree, p, pL))
